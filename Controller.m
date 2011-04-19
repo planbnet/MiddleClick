@@ -44,10 +44,6 @@
 	WakeObserver *wo = [[WakeObserver alloc] init];
 	[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: wo selector: @selector(receiveWakeNote:) name: NSWorkspaceDidWakeNotification object: NULL];
 	
-	
-	//add traymenu
-    TrayMenu *menu = [[TrayMenu alloc] initWithController:self];
-    [NSApp setDelegate:menu];
     [NSApp run];
 	
 	[pool release];
